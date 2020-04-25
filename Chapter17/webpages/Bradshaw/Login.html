@@ -1,0 +1,54 @@
+<html>
+<head>
+	<title>Log In to Bradshaw Marina</title>
+	<script language="JavaScript1.2">
+		function verify() {
+			if (document.Input.Phone.value == "")
+			{
+				alert("You must enter a phone number!!");
+				return false;
+			}
+			else return true;
+		}
+	</script>
+</head>
+<body>
+<center>
+<hr>
+<img src = "images/sabtart_07.gif">
+<img src = "images/stardrag_04.gif">
+<img src = "images/sabtart_22.gif">
+<img src = "images/sabtart_01.gif">
+<img src = "images/sabtart_04.gif">
+<img src = "images/sabtart_06.gif">
+<img src = "images/sabtart_19.gif">
+<img src = "images/stardrag_01.gif">
+<img src = "images/sabtart_32.gif">
+<img src = "images/stardrag_08.gif">
+<hr>
+<h2>Please log in</h2>
+<p>Enter your phone number in 999-9999 format.<br>
+   If you are not a customer, please return to the
+   <a href="index.html">Bradshaw Marina</a> home page.</p>
+<form name="Input" method="post"
+	action="http://localhost:8080/servlet/Bradshaw.LoginServlet" >
+	<table border=0 bgcolor="lightgoldenrodyellow" cellpadding=10 >
+	<tr>
+		<td><strong>Phone number</strong></td>
+		<td><input type="text" name="Phone" value="" size=20></td>
+	</tr>
+	</table>
+	<table border=0 cellspacing=15 >
+	<tr>
+		<td><input type="button" value = "Log In"
+				onClick = "if (verify() == true) submit();"></td>
+		<td><input type="reset" value = "Clear"></td>
+	</tr>
+	</table>
+</form>
+Please wait after pressing <strong>Log in</strong>
+while we retrieve your records from our database.<br>
+<em>(This may take a few moments)</em>
+</center>
+</body>
+</html>

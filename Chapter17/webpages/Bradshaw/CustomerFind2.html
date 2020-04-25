@@ -1,0 +1,28 @@
+<html>
+<!-- CustomerFind2.html -->
+<head>
+	<title>Customer Form</title>
+	<script language="JavaScript1.2">
+		function verify() {
+			if (document.Input.Phone.value == "")
+			{
+				alert("You must enter a valid phone number!");
+				return false;
+			}
+			else return true;
+		}
+	</script>
+</head>
+
+<body>
+<h1>Find Customer</h1>
+<form name="Input"
+	action="http://localhost:8080/servlet/Bradshaw.FindCustServlet2"
+	method="post">
+
+    Phone Number: <input type="text" name="Phone">
+    <input type="button" value="Submit Query"
+    			onClick="if (verify() == true) submit();">
+</form>
+</body>
+</html>
